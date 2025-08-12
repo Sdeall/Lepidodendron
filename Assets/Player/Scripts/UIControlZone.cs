@@ -7,7 +7,7 @@ public class UIControlZone : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     private PlayerMovement playerMovement;
 
-    void Start()
+    void Awake()
     {
         SetComponents();
     }
@@ -26,6 +26,6 @@ public class UIControlZone : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         playerMovement = GetComponentInParent<PlayerMovement>();
         if (playerMovement == null)
-            Debug.LogError("PlayerMovement not found in scene!");
+            Debug.LogError("PlayerMovement not found!");
     }
 }
