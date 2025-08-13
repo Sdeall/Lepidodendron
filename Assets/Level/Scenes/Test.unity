@@ -1970,7 +1970,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 9c78f45d9a6e31c41a9c3f548792820f, type: 2}
+  m_TargetTexture: {fileID: 1964602097}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -3345,10 +3345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bac348fdbaad7e4fadb110d5d70965c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetWidth: 320
-  targetHeight: 180
-  updateInterval: 0.17
+  targetWidth: 480
+  targetHeight: 270
+  updateInterval: 0.25
   useTemporaryRT: 0
+  useOptimizations: 0
   renderOutput: {fileID: 1867626970}
 --- !u!114 &498851449
 MonoBehaviour:
@@ -5523,6 +5524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneState: 3
+  _cursor: {fileID: 2800000, guid: 064c449f3edb5f845b09e916b5a701fe, type: 3}
 --- !u!1 &1451407286
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,6 +5810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneState: 2
+  _cursor: {fileID: 2800000, guid: 90fabe1e643c965488a06a2e5b387cfd, type: 3}
 --- !u!1 &1867626968
 GameObject:
   m_ObjectHideFlags: 0
@@ -5865,7 +5868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 1964602097}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5880,6 +5883,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867626968}
   m_CullTransparentMesh: 1
+--- !u!84 &1964602097
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 480
+  m_Height: 270
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 90
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &2006319906
 GameObject:
   m_ObjectHideFlags: 0
@@ -5969,6 +6009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneState: 1
+  _cursor: {fileID: 2800000, guid: f1e9f6fa4f5231b479bf209176635d73, type: 3}
 --- !u!1 &2089673933
 GameObject:
   m_ObjectHideFlags: 0
