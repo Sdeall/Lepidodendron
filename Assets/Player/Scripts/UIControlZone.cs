@@ -17,7 +17,7 @@ public class UIControlZone : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Cursor.SetCursor(_cursor, new Vector2(0,0), CursorMode.Auto);
+        Cursor.SetCursor(_cursor, new Vector2(8, 8), CursorMode.Auto);
     }
 
     public void OnPointerDown(PointerEventData eventData)
