@@ -2,15 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Improved PlayerCamera with safer RenderTexture management, editor validation,
-/// optional use of temporary RTs, and skipping renders when not needed.
-/// Designed for a low-FPS "slideshow" camera feed while UI stays at normal FPS.
-/// </summary>
 [DisallowMultipleComponent]
 public class PlayerCamera : MonoBehaviour
 {
     [Header("RenderTexture settings")]
+    [SerializeField] int applicationFPS;
     [SerializeField] int targetWidth = 320;
     [SerializeField] int targetHeight = 180;
     [SerializeField] float updateInterval = 0.20f;
@@ -44,6 +40,7 @@ public class PlayerCamera : MonoBehaviour
 
     void Awake()
     {
+        Application.targetFrameRate = applicationFPS;
         playerCamera = GetComponentInChildren<Camera>();
         if (playerCamera == null)
         {

@@ -30,6 +30,11 @@ public class UIControlZone : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         playerMovement.SetMovementState(PlayerMovement.MovementState.Static);
     }
 
+    void OnDisable()
+    {
+        playerMovement.SetMovementState(PlayerMovement.MovementState.Static);
+    }
+
     void SetComponents()
     {
         playerMovement = GetComponentInParent<PlayerMovement>();
